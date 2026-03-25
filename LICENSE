@@ -1,0 +1,94 @@
+# Contributing to Viral Content Ideas Skill
+
+Thanks for your interest in contributing! This skill is part of the Claude Skills ecosystem and follows the standard SKILL.md format.
+
+---
+
+## How Skills Work
+
+A skill is a Markdown file (`SKILL.md`) with YAML frontmatter that Claude reads before responding to relevant prompts. The frontmatter has two required fields:
+
+```yaml
+---
+name: skill-name
+description: "When to use this skill and what it does. This is the primary trigger."
+---
+```
+
+The body of the file is instructions written for Claude — think of it as a detailed system prompt for a specific task.
+
+---
+
+## Ways to Contribute
+
+### 🐛 Fix a bug or gap
+Found a case where the skill produces weak ideas? Open an issue describing the prompt and what the output looked like. Even better — propose a fix in a PR.
+
+### ➕ Expand platform coverage
+The skill currently covers TikTok, Instagram, YouTube Shorts, and Twitter/X. Good additions:
+- LinkedIn (B2B content virality logic)
+- Pinterest (visual/SEO-driven formats)
+- Threads (conversational, text-first)
+- YouTube long-form (thumbnail + title strategy)
+
+### 🎣 Add more hook patterns
+The hook swipe file in `SKILL.md` can always grow. Contributions should include:
+- The hook pattern/template
+- The psychological mechanism it uses
+- At least one concrete example
+
+### 🌍 Add language support
+The skill works in Spanish and English. If you want to add explicit support for Portuguese, French, or other languages, you can add a `references/` folder with localized examples.
+
+### 🧪 Share test cases
+One of the best contributions is sharing prompts + expected outputs that the skill should handle well. Open an issue with the format:
+
+```
+Prompt: [what you asked Claude]
+Expected: [what a good output looks like]
+Actual: [what the skill produced, if testing]
+```
+
+---
+
+## Development Workflow
+
+1. **Fork** the repo and clone it locally
+2. **Edit** `viral-content-ideas/SKILL.md`
+3. **Test** by uploading the modified skill to Claude and running a few prompts
+4. **Document** what you changed in your PR description
+5. **Open a PR** with a clear title (e.g., `feat: add LinkedIn virality logic`)
+
+---
+
+## PR Guidelines
+
+- Keep PRs focused — one change per PR when possible
+- Describe *why* the change improves the skill, not just *what* changed
+- If you're adding a new section, make sure it follows the existing formatting conventions
+- Don't reduce specificity — vague instructions make for worse outputs
+
+---
+
+## Skill Writing Principles
+
+When editing `SKILL.md`, follow these principles:
+
+**Be specific, not generic**
+> ❌ "Write a good hook"
+> ✅ "Write a hook under 10 words that opens a curiosity gap using the pattern: 'The [X] nobody talks about'"
+
+**Include examples**
+Every framework or rule works better with a concrete example attached.
+
+**Label outputs clearly**
+The structured output format (Hook, Angle, Outline, CTA, Viral Trigger) should remain consistent — it's what makes the skill predictable and useful.
+
+**Think about edge cases**
+What happens if the user gives a weird niche? A very broad topic? No audience info at all? The skill should handle these gracefully.
+
+---
+
+## Questions?
+
+Open an issue with the `question` label. Happy to help!
